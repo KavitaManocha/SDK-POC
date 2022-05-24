@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.regula.formtask.pages.AccountDetailsViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/acc_dtls"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_acc_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:gravity="center_horizontal"
+                android:text="@string/account_details"
+                android:textSize="@dimen/sp_17" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_26"
+                app:counterEnabled="true"
+                app:counterMaxLength="11"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_ifsc_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/ifsc_code"
+                    android:inputType="text"
+                    android:maxLength="11"
+                    android:text="@={viewModel.ifsc_code}"
+                    android:textAllCaps="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_cust_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/cust_bank"
+                    android:inputType="text"
+                    android:text="@={viewModel.cust_bank}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_bank_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/bank_add"
+                    android:inputType="text"
+                    android:text="@={viewModel.cust_bank_add}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                app:counterEnabled="true"
+                app:counterMaxLength="18"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_cust_acc_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:hint="@string/cust_acc_no"
+                    android:inputType="number"
+                    android:maxLength="18"
+                    android:text="@{viewModel.cust_acc_type}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinner_acc_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:padding="@dimen/dp_20"
+                android:spinnerMode="dialog"
+                android:entries="@array/acc_type"
+                tools:setOnItemSelectedListener="@{viewModel.custt_acc_type}"/>
+
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:padding="@dimen/dp_20"
+                android:spinnerMode="dialog"
+                android:entries="@array/loan_inst_pymnt"
+                android:text="@{viewModel.category}"
+                tools:setOnItemSelectedListener="@{viewModel.categorry}"/>
+
+            <Spinner
+                android:id="@+id/spinner_frequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:padding="@dimen/dp_20"
+                android:spinnerMode="dialog"
+                android:entries="@array/mnth_adho"
+                android:text="@{viewModel.frequency}"
+                tools:setOnItemSelectedListener="@{viewModel.freqquency}"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_6"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button_color"
+                android:text="@string/next"
+                android:textColor="@color/black"
+                android:onClick="@{(v) -> viewModel.goClick()}"/>
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_6"
+                android:layout_weight="1"
+                android:backgroundTint="@color/button_color"
+                android:text="@string/back"
+                android:textColor="@color/black"
+                android:onClick="@{(v) -> viewModel.goClick()}"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

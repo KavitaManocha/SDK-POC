@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">FormTask</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="account_details">Account Details</string>
+    <string name="mandate_details">Mandate Details</string>
+    <string name="proceed">Proceed</string>
+    <string name="next">Next</string>
+
+    <string name="loan_number">File ID/Loan Number/Loan ID/Customer ID<sup>*</sup></string>
+    <string name="benificiary_name">Beneficiary Name<sup>*</sup></string>
+    <string name="customer_mobile">Customer Mobile<sup>*</sup></string>
+    <string name="customer_email">Customer Email<sup>*</sup></string>
+    <string name="ifsc_code">IFSC Code<sup>*</sup></string>
+    <string name="cust_bank">Customer Bank<sup>*</sup></string>
+    <string name="bank_add">Bank Add.</string>
+    <string name="cust_acc_no">Customer Account Number<sup>*</sup></string>
+    <string name="cust_acc_type">Select Account Type<sup>*</sup></string>
+    <string-array name="acc_type">
+        <item>SB</item>
+        <item>CA</item>
+        <item>CC</item>
+        <item>OTHERS</item>
+    </string-array>
+    <string name="loan_installment_payment">Loan Installment Payment</string>
+    <string-array name="loan_inst_pymnt">
+        <item>Select Category</item>
+        <item>Select Frequency</item>
+    </string-array>
+    <string-array name="mnth_adho">
+        <item>MNTH</item>
+        <item>ADHO</item>
+    </string-array>
+    <string name="mnth">MNTH</string>
+    <string name="adho">ADHO</string>
+    <string name="search">Search</string>
+    <string name="back">Back</string>
+    <string name="ach_amt">Ach Amount</string>
+    <string name="mandate_date">Mandate Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="or">OR</string>
+    <string name="until_cancelled">Until Cancelled</string>
+    <string name="reference_number">Reference No</string>
+    <string name="nach_generate">Nach Generate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="accc_type">Account Type</string>
+    <string name="category">Category</string>
+    <string name="freq">Frequency</string>
+</resources>
